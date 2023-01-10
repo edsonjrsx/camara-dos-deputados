@@ -106,6 +106,15 @@ class Camara_Deputados_Extrator:
                                 )
         print(f"Votações entre {start_year}-{end_year} extraídas com sucesso!")
     
+        
+    def get_votacoes_orientacao_partido(self, start_year, end_year):
+        self.extract_table_by_year(name='votacoesOrientacoes',
+                                   start_year=start_year,
+                                   end_year=end_year
+                                )
+        print(f"Orientações partidos votações entre {start_year}-{end_year} extraídas com sucesso!")
+    
+    
     def get_votacoes_deputados(self, start_year, end_year):
         self.extract_table_by_year(name='votacoesVotos',
                                    start_year=start_year,
@@ -128,5 +137,6 @@ class Camara_Deputados_Extrator:
         self.get_proposicoes_temas(start_year=start_year, end_year=end_year)
         self.get_proposicoes_autores(start_year=start_year, end_year=end_year)
         self.get_votacoes(start_year=start_year, end_year=end_year)
+        self.get_votacoes_orientacao_partido(start_year=start_year, end_year=end_year)
         self.get_votacoes_deputados(start_year=start_year, end_year=end_year)
         
